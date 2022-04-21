@@ -9,8 +9,8 @@
  */
 typedef struct fmt_spec
 {
-        char *specifier;
-        int (*func)(va_list);
+	char *specifier;
+	int (*func)(va_list);
 } fmt_spec;
 int _printf(const char *format, ...);
 int print_char(va_list args);
