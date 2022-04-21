@@ -9,8 +9,8 @@
  */
 typedef struct fmt_spec
 {
-        char *specifier;
-        int (*func)(va_list);
+        char *specifier; //the specifier to be checked
+        int (*func)(va_list); //the function that will be passed depending on the value of the specifier
 } fmt_spec;
 int _printf(const char *format, ...);
 int print_char(va_list args);
