@@ -3,14 +3,14 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * struct specifier - struct specifier
- * @valid: the valid character 
- * @f: the associated functions
+ * struct fmt_spec - struct specifier
+ * @specifier: the valid character
+ * @func: the associated functions
  */
 typedef struct fmt_spec
 {
-        char *specifier; 
-        int (*func)(va_list); 
+        char *specifier;
+        int (*func)(va_list);
 } fmt_spec;
 int _printf(const char *format, ...);
 int print_char(va_list args);
