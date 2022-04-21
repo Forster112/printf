@@ -7,11 +7,11 @@
  * @valid: the valid character 
  * @f: the associated functions
  */
-typedef struct specifier
+typedef struct fmt_spec
 {
-        char *valid;
-        int (*f)(va_list);
-} spec;
+        char *specifier;
+        int (*func)(va_list);
+} fmt_spec;
 int _printf(const char *format, ...);
 int print_char(va_list args);
 int print_str(va_list args);
