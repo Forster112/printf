@@ -1,6 +1,6 @@
 .\" Manpage for Our Printf Project.
 .\"
-.TH man 1 "29 Jul 2019" "1.0" "Printf Project man page"
+.TH man 1 "21 April 2022" "1.0" "Printf Project man_page"
 .SH NAME
 .Printf
 \- This function produces output according to a format.
@@ -26,7 +26,7 @@ Conversion specifiers: There are a many different conversion specifiers that can
 
 %i - print same as "d", integer in base 10.
 
-% - print a percent sign (%).
+%% - print a percent sign (%).
 
 A conversion specifier begins with a percent sign and ends with the conversion characters shown below.
 
@@ -42,4 +42,4 @@ _printf("Integer: %d", integer); (or use "%i" for print integer, depends of the 
 printf(1), _printf(2), printf(3), sprintf(), snprintf(), vsprintf(), vsnprintf().
 
 .SH AUTHOR
-Udemezue Forster and Ogunrinde Kayode - Students at ALX system engineering.
+Project and page by Udemezue Forster and Ogunrinde Kayode - Students at ALX system engineering.
