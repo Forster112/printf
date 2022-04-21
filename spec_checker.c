@@ -19,7 +19,7 @@ int (*spec_checker(char x))(va_list)
     };
     while (arr[i].specifier)
     {
-        if (x == arr[i].specifier)
+        if (x == arr[i].specifier[0])
         {
             return (arr[i].func);
         }
