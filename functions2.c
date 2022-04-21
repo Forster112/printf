@@ -45,5 +45,5 @@ int print_decimal(va_list args)
  */
 int print_int(va_list args)
 {
-        return (print_d(args));
+        return (print_decimal(args));
 }
