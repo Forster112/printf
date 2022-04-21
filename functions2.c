@@ -3,11 +3,11 @@
 #include <stdarg.h>
 
 /**
- * print_d - prints a decimal
+ * print_decimal - prints a decimal
  * @args: decimal arguments
  * Return: decimal count
  */
-int print_d(va_list args)
+int print_decimal(va_list args)
 {
 
         unsigned int absolute, aux, countnum, count;
@@ -39,11 +39,11 @@ int print_d(va_list args)
 }
 
 /**
- * print_i - prints an integer
+ * print_int - prints an integer
  * @args: integer argument
  * Return: the decimal function
  */
-int print_i(va_list args)
+int print_int(va_list args)
 {
         return (print_d(args));
 }

@@ -3,11 +3,11 @@
 #include <stdarg.h>
 
 /**
- * print_c - prints characters
+ * print_char - prints characters
  * @args: character argument
  * Return: number of characters printed
  */
-int print_c(va_list args)
+int print_char(va_list args)
 {
         int c;
 
@@ -16,11 +16,11 @@ int print_c(va_list args)
 }
 
 /**
- * print_s - prints strings
+ * print_str - prints strings
  * @args: string argument
  * Return: number of strings printed
  */
-int print_s(va_list args)
+int print_str(va_list args)
 {
         int i, count = 0;
         char *str;
