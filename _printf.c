@@ -42,16 +42,16 @@ int _printf(const char *format, ...)
 					{
 						count = m(args);
 					} else
+					{
+						count = _putchar(format[i]) + _putchar(format[i + 1]);
+					} i += 2;
 				}
-				count = _putchar(format[i]) + _putchar(format[i + 1]);
-			} i += 2;
-		}
-	} else
-	{
-		count += _putchar(format[i]);
-		i++;
-	}
-} va_end(args);
-return (count);
-} return (-1);
+			} else
+			{
+				count += _putchar(format[i]);
+				i++;
+			}
+		} va_end(args);
+		return (count);
+	} return (-1);
 }
