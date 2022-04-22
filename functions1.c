@@ -9,10 +9,10 @@
  */
 int print_char(va_list args)
 {
-        int c;
+	int c;
 
-        c = va_arg(args, int);
-        return (_putchar(c));
+	c = va_arg(args, int);
+	return (_putchar(c));
 }
 
 /**
@@ -22,20 +22,20 @@ int print_char(va_list args)
  */
 int print_str(va_list args)
 {
-        int i, count = 0;
-        char *str;
+	int i, count = 0;
+	char *str;
 
-        i = 0;
-        str = va_arg(args, char*);
-        if (str == NULL)
-                str = "(null)";
-        while (str[i] != '\0')
-        {
-                _putchar(str[i]);
-                i++;
-                count++;
-        }
-        return (count);
+	i = 0;
+	str = va_arg(args, char*);
+	if (str == NULL)
+		str = "(null)";
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+		count++;
+	}
+	return (count);
 }
 
 /**
@@ -45,12 +45,12 @@ int print_str(va_list args)
  */
 int print_percent(va_list args)
 {
-        char *per;
+	char *per;
 
-        per = "%";
-        if (va_arg(args, int) == *per)
-        {
-                return (*per);
-        }
-        return (*per);
+	per = "%";
+	if (va_arg(args, int) == *per)
+	{
+		return (*per);
+	}
+	return (*per);
 }
