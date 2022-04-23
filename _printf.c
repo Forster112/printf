@@ -10,48 +10,34 @@
  *
  * Return: number of printed character
  */
+
 int _printf(const char *format, ...)
 {
-	if (format != NULL)
-	{
-		int count = 0, i = 0;
-		int (*m)(va_list);
-		va_list args;
+	int character_print;
+	conver_t f_list[] = {
+		{"c", print_char},
+		{"s", print_str},
+		{"%", print_percent},
+		{"i", print_int},
+        {"d", print_int},
+		{"r", print_rev},
+        {"b", print_binary},
+		{"R", rot13},
+		{"u", unsigned_integer},
+		{"o", octal_print},
+		{"x", hex_print},
+		{"X", heX_print},
+		{NULL, NULL}
+	};
+	va_list args;
 
-		va_start(args, format);
-		if (format[0] == '%' && format[1] == '\0')
-		{
-			return (-1);
-		}
+	if (format == NULL)
+		return (-1);
 
-		while (format[i] != '\0')
-		{
-			if (format[i] == '%')
-			{
-				if (format[i + 1] == '%')
-				{
-					count += _putchar(format[i]);
-					i += 2;
-				} else if (format[i + 1] == '\0')
-				{
-					count += _putchar(format[i]);
-				} else
-				{
-					m = spec_checker(format[i + 1]);
-					if (m)
-					{
-						count = m(args);
-					} else
-					{
-						count = _putchar(format[i]) + _putchar(format[i + 1]);
-					} i += 2;
-				}
-			} else
-			{
-				count += _putchar(format[i]);
-				i++;
-			}
-		} va_end(args);
-		return (count);
-	} return (-1);
+	va_start(args, format);
+
+	/*Calling parser function*/
+	character_print = parse_func(format, f_list, args);
+	va_end(args);
+	return (character_print);
 }
