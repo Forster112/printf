@@ -14,7 +14,7 @@
 int _printf(const char *format, ...)
 {
 	int character_print;
-	conver_t f_list[] = {
+	converter_func f_list[] = {
 		{"c", print_char},
 		{"s", print_str},
 		{"%", print_percent},

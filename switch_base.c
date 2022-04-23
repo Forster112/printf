@@ -27,7 +27,7 @@ int print_binary(va_list list)
 
 	for (i = 0; num_decim > 0; i++)
 	{
-		if (num % 2 == 0)
+		if (num_decim % 2 == 0)
 			str[i] = '0';
 		else
 			str[i] = '1';
@@ -44,11 +44,11 @@ int print_binary(va_list list)
 }
 
 /**
- * print_octal - Prints the numeric representation of a number in octal base
+ * octal_print - Prints the numeric representation of a number in octal base
  * @list: List of all the arguments passed to the program
  * Return: Number of symbols printed to stdout
  */
-int print_octal(va_list list)
+int octal_print(va_list list)
 {
 	unsigned int num;
 	int i;
@@ -84,11 +84,11 @@ int print_octal(va_list list)
 }
 
 /**
- * print_hex - Prints a representation of a decimal number on base16 lowercase
+ * hex_print - Prints a representation of a decimal number on base16 lowercase
  * @list: List of the arguments passed to the function
  * Return: Number of characters printed
  */
-int print_hex(va_list list)
+int hex_print(va_list list)
 {
 	unsigned int num;
 	int len;
@@ -130,11 +130,11 @@ int print_hex(va_list list)
 
 
 /**
- * print_heX - Prints a representation of a decimal number on base16 Uppercase
+ * heX_print - Prints a representation of a decimal number on base16 Uppercase
  * @list: List of the arguments passed to the function
  * Return: Number of characters printed
  */
-int print_heX(va_list list)
+int heX_print(va_list list)
 {
 	unsigned int num;
 	int len;

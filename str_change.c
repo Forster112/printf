@@ -15,11 +15,11 @@ int print_rev(va_list arg)
 	str = va_arg(arg, char *);
 	if (str == NULL)
 		return (-1);
-	ptr = rev_string(str);
+	ptr = string_inv(str);
 	if (ptr == NULL)
 		return (-1);
 	for (i = 0; ptr[i] != '\0'; i++)
-		_write_char(ptr[i]);
+		_putchar(ptr[i]);
 	free(ptr);
 	return (i);
 }

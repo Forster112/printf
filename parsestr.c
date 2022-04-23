@@ -9,7 +9,7 @@
  *
  * Return: total number of characters printed
  */
-int parse_func(const char *format, conver_t f_list[], va_list args)
+int parse_func(const char *format, converter_func f_list[], va_list args)
 {
 	int i, j, s_val, character_print;
 

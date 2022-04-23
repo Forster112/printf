@@ -55,7 +55,7 @@ unsigned int base_len(unsigned int num, int base)
 {
 	unsigned int len;
 
-	for (len = 0; num > 0; i++)
+	for (len = 0; num > 0; len++)
 	{
 		num = num / base;
 	}
