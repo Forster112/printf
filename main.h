@@ -18,26 +18,27 @@ struct convert
 };
 typedef struct convert conver_t;
 
-int parser(const char *format, conver_t f_list[], va_list arg_list);
+int parse_func(const char *format, conver_t f_list[], va_list arg_list);
 int _printf(const char *format, ...);
-int _write_char(char);
-int print_char(va_list);
-int print_string(va_list);
-int print_percent(va_list);
-int print_integer(va_list);
-int print_number(va_list);
-int unsigned_integer(va_list);
-int print_binary(va_list);
-int print_reversed(va_list arg);
-int rot13(va_list);
+int _putchar(char c);
+int print_char(va_list args);
+int print_str(va_list args);
+int print_percent(_attribute_((unused))va_list args);
+int print_int(va_list args);
+int print_number(va_list args);
+int unsigned_integer(va_list args);
+int print_binary(va_list list);
+int print_rev(va_list arg);
+int rot13(va_list strs);
 int print_octal(va_list list);
 int print_hex(va_list list);
 int print_heX(va_list list);
+int hex_check(int num, char x);
 
-unsigned int base_len(unsigned int, int);
-char *rev_string(char *);
-void write_base(char *str);
+unsigned int base_len(unsigned int num, int base);
+char *string_inv(char *s);
+void base_print(char *str);
 char *_memcpy(char *dest, char *src, unsigned int n);
-int print_unsgined_number(unsigned int);
+int print_unsgined_num(unsigned int d);
 
 #endif
