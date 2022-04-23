@@ -1,24 +1,43 @@
-#ifndef printf_header
-#define printf_header
-#include <stdio.h>
+#ifndef MAIN_H
+#define MAIN_H
+
+#include <unistd.h>
+#include <stdlib.h>
 #include <stdarg.h>
+
 /**
- * struct fmt_spec - struct specifier
- * @specifier: the valid character
- * @func: the associated functions
- */
-typedef struct fmt_spec
+* struct convert - defines a structure for symbols and functions
+*
+* @sym: The operator
+* @f: The associate function
+*/
+struct convert
 {
-	char *specifier;
-	int (*func)(va_list);
-} fmt_spec;
+	char *sym;
+	int (*f)(va_list);
+};
+typedef struct convert conver_t;
+
+int parser(const char *format, conver_t f_list[], va_list arg_list);
 int _printf(const char *format, ...);
-int print_char(va_list args);
-int print_str(va_list args);
-int print_percent(va_list args);
-int print_decimal(va_list args);
-int print_int(va_list args);
-int _putchar(char c);
-int (*spec_checker(char x))(va_list);
+int _write_char(char);
+int print_char(va_list);
+int print_string(va_list);
+int print_percent(va_list);
+int print_integer(va_list);
+int print_number(va_list);
+int unsigned_integer(va_list);
+int print_binary(va_list);
+int print_reversed(va_list arg);
+int rot13(va_list);
+int print_octal(va_list list);
+int print_hex(va_list list);
+int print_heX(va_list list);
+
+unsigned int base_len(unsigned int, int);
+char *rev_string(char *);
+void write_base(char *str);
+char *_memcpy(char *dest, char *src, unsigned int n);
+int print_unsgined_number(unsigned int);
 
 #endif
