@@ -3,7 +3,7 @@
 
 
 /**
- * rev_string - reverses a string in place
+ * string_inv - reverses a string in place
  *
  * @s: string to reverse
  * Return: A pointer to a character
@@ -33,7 +33,7 @@ char *string_inv(char *s)
 }
 
 /**
- * write_base - sends characters to be written on standard output
+ * base_print - sends characters to be written on standard output
  * @str: String to parse
  */
 void base_print(char *str)

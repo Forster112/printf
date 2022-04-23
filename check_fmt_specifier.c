@@ -3,7 +3,7 @@
 
 /**
  * print_char - Prints character
- * @list: list of arguments
+ * @args: list of arguments
  * Return: Will return the amount of characters printed.
  */
 int print_char(va_list args)
@@ -15,7 +15,7 @@ int print_char(va_list args)
 
 
 /**
- * print_string - Prints a string
+ * print_str - Prints a string
  * @args: list of arguments
  * Return: Will return the amount of characters printed.
  */
@@ -50,7 +50,7 @@ int print_percent(__attribute__((unused))va_list args)
 
 
 /**
- * print_integer - Prints an integer
+ * print_int - Prints an integer
  * @args: list of arguments
  * Return: Will return the amount of characters printed.
  */
@@ -64,7 +64,7 @@ int print_int(va_list args)
 
 /**
  * unsigned_integer - Prints Unsigned integers
- * @list: List of all of the argumets
+ * @args: List of all of the argumets
  * Return: a count of the numbers
  */
 int unsigned_integer(va_list args)

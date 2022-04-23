@@ -12,8 +12,8 @@ int print_binary(va_list list)
 	unsigned int num_decim;
 	int i, len;
 	char *str;
-	
-    char *str_rev;
+
+	char *str_rev;
 
 	num_decim = va_arg(list, unsigned int);
 	if (num_decim == 0)
